@@ -1,0 +1,76 @@
+{
+  "name": "aws-easy-deploy",
+  "description": "A toolkit for deploying UIs and APIs with ease",
+  "version": "0.0.0",
+  "author": "Kerry Ritter @KerryRitter",
+  "bin": {
+    "aws-easy-deploy": "./bin/run"
+  },
+  "bugs": "https://github.com/KerryRitter/aws-easy-deploy/issues",
+  "scripts": {
+    "start": "ts-node ./src/index",
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
+  },
+  "dependencies": {
+    "@auth0/s3": "^1.0.0",
+    "@nestjs/common": "^7.0.13",
+    "@nestjs/core": "^7.0.13",
+    "archiver": "^4.0.1",
+    "aws-sdk": "^2.679.0",
+    "cfn-deploy": "^1.1.10",
+    "cli-ux": "^5.4.6",
+    "promise.allsettled": "^1.0.2",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^6.5.5",
+    "tslib": "^1.13.0",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^7.1.5",
+    "@nestjs/schematics": "^7.0.0",
+    "@types/archiver": "^3.1.0",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^10.17.21",
+    "@types/promise.allsettled": "^1.0.3",
+    "@types/rimraf": "^3.0.0",
+    "@types/yargs": "^15.0.5",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
+    "globby": "^10.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/KerryRitter/aws-easy-deploy",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "aws-easy-deploy",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "KerryRitter/aws-easy-deploy",
+  "types": "lib/index.d.ts"
+}
